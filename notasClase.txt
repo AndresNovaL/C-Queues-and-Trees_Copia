@@ -1,0 +1,46 @@
+TAMAÑO DE TIPOS DE DATOS EN C
+-----------------------------
+int      -> 4 bytes
+float    -> 4 bytes
+char     -> 1 byte
+short    -> 2 bytes
+long     -> 4 a 8 bytes
+
+
+USO DE STRUCT EN C
+------------------
+Un 'struct' permite agrupar diferentes tipos de datos en una sola estructura.
+
+
+Definición de un struct con alias:
+----------------------------------
+struct content {
+    int num;
+    float n2;
+    char um[10];
+} d1;  // 'd1' es el alias del struct
+
+
+Creación de variables con el alias:
+-----------------------------------
+d1 N1{
+    // Se crea una variable N1 del tipo 'd1' (es decir, del tipo struct content)
+}
+
+d1 n2{
+    // Se crea otra variable n2 del mismo tipo
+}
+
+
+100                 |
+    [Int]           |
+104                 |
+    [float]         |> Esta estructura lleva por nombre -> d1
+108                 |
+    [Char[10]]      |
+117                 |
+
+117 bytes tiene la estructura anterior
+
+------------- / -------------------- / ---------------------------------
+
