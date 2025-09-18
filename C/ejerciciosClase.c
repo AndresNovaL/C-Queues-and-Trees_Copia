@@ -144,6 +144,26 @@ void ejercicio9() {
     printf("\n");
 }
 
+/*
+Ejemplo 10: Punteros a funciones
+Se muestra cómo declarar un puntero a función y usarlo para llamar diferentes funciones.
+- int suma(int, int), int resta(int, int); // Funciones
+- int (*operacion)(int, int); // Puntero a función
+- operacion = suma; // Apunta a suma
+- operacion = resta; // Apunta a resta
+- printf(...) // Llama la función apuntada
+*/
+int suma(int num1, int num2) { return num1 + num2; }
+int resta(int num1, int num2) { return num1 - num2; }
+
+void ejercicio10() {
+    int (*operacion)(int, int);
+    operacion = suma;
+    printf("Ejercicio 10: Suma = %d\n", operacion(2, 3));
+    operacion = resta;
+    printf("Ejercicio 10: Resta = %d\n", operacion(5, 2));
+}
+
 int main() {
     ejercicio1();
     ejercicio2();
@@ -153,6 +173,7 @@ int main() {
     ejercicio6();
     ejercicio7();
     ejercicio8();
-    ejercicio9();
+    ejercicio9();    
+    ejercicio10();   
     return 0;
 }
